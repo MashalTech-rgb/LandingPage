@@ -36,56 +36,56 @@ export const heroSlides = [
     highlighted: "from 8 years",
     description:
       "Where to grow your business as a photographer: site or social media?",
-    image: "/images/HeroSection 1.png",
+    image: "/src/assets/images/HeroSection 1.png",
   },
   {
     title: "Elevate your photography",
     highlighted: "brand identity",
     description:
       "Create a distinctive brand that resonates with your target audience and stands out in a competitive market.",
-    image: "/images/HeroSection 2.png",
+    image: "/src/assets/images/HeroSection 2.png",
   },
   {
     title: "Pricing strategies",
     highlighted: "that maximize profit",
     description:
       "Learn to price your photography services competitively while ensuring your business remains profitable.",
-    image: "/images/HeroSection 3.png",
+    image: "/src/assets/images/HeroSection 3.png",
   },
 ];
 export const communityCards = [
   {
     id: 1,
-    icon: "/images/Icon.png",
+    icon: "/src/assets/images/Icon.png",
     title: "Membership Organizations",
     desc: "Our membership management software provides full automation of membership renewals and payments",
   },
   {
     id: 2,
-    icon: "/images/Icon (1).png",
+    icon: "/src/assets/images/Icon (1).png",
     title: "National Associations",
     desc: "Our membership management software provides full automation of membership renewals and payments",
   },
   {
     id: 3,
-    icon: "/images/Icon (2).png ",
+    icon: "/src/assets/images/Icon (2).png ",
     title: "Clubs And Groups",
     desc: "Our membership management software provides full automation of membership renewals and payments",
   },
 ];
 
 export const clientLogos = [
-  "/images/Logo.png",
-  "/images/Logo (1).png",
-  "/images/Logo (2).png",
-  "/images/Logo (3).png",
-  "/images/Logo (4).png",
-  "/images/Logo (5).png",
-  "/images/Logo (6).png",
+  "/src/assets/images/Logo.png",
+  "/src/assets/images/Logo (1).png",
+  "/src/assets/images/Logo (2).png",
+  "/src/assets/images/Logo (3).png",
+  "/src/assets/images/Logo (4).png",
+  "/src/assets/images/Logo (5).png",
+  "/src/assets/images/Logo (6).png",
 ];
 // Hero Section 1
 export const heroOne = {
-  image: "/images/HeroSection 2.png",
+  image: "/src/assets/images/HeroSection 2.png",
   heading: "The unseen of spending three years at Pixelgrade",
   text: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
   harum nesciunt quae eaque facere possimus. Minus quia vero saepe
@@ -103,25 +103,25 @@ export const statsContent = {
 export const stats = [
   {
     id: 1,
-    icon: "/images/Member.png",
+    icon: "/src/assets/images/Member.png",
     value: "2,245,341",
     label: "Members",
   },
   {
     id: 2,
-    icon: "/images/Club.png",
+    icon: "/src/assets/images/Club.png",
     value: "46,328",
     label: "Clubs",
   },
   {
     id: 3,
-    icon: "/images/Event.png",
+    icon: "/src/assets/images/Event.png",
     value: "828,867",
     label: "Event Bookings",
   },
   {
     id: 4,
-    icon: "/images/Payment.png",
+    icon: "/src/assets/images/Payment.png",
     value: "1,926,436",
     label: "Payments",
   },
@@ -129,7 +129,7 @@ export const stats = [
 
 // Hero Section 2
 export const heroTwo = {
-  image: "/images/HeroSection 3.png",
+  image: "/src/assets/images/HeroSection 3.png",
   heading: "How to design your site footer like we did",
   text: `Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
   augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque
@@ -152,7 +152,7 @@ export const testimonial = {
   Curabitur id nibh id sem dignissim finibus ac sit amet magna.`,
   name: "Tim Smith",
   role: "British Dragon Boat Racing Association",
-  image: "/images/image 9.png",
+  image: "/src/assets/images/image 9.png",
 };
 // Blog Header
 export const blogHeader = {
@@ -166,20 +166,20 @@ export const blogHeader = {
 export const blogPosts = [
   {
     id: 1,
-    image: "/images/Blog 1.png",
+    image: "/src/assets/images/Blog 1.png",
     title: "Creating Streamlined Safeguarding Processes with OneRen",
     link: "#",
   },
   {
     id: 2,
-    image: "/images/Blog 2.png",
+    image: "/src/assets/images/Blog 2.png",
     title:
       "What are your safeguarding responsibilities and how can you manage them?",
     link: "#",
   },
   {
     id: 3,
-    image: "/images/Blog 3.png",
+    image: "/src/assets/images/Blog 3.png",
     title: "Revamping the Membership Model with Triathlon Australia",
     link: "#",
   },
