@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import './Navbar.css';
+// Navbar.js (updated)
+import React, { useState } from "react";
+import "../Styles/Navbar.css";
+import Button from "./Button";
+import Logo from "./Logo";
+import { navItems } from "../Common/Content";
+import { useTheme } from "../Context/ThemeContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,52 +17,63 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Logo */}
-        <div className="nav-logo">
-          <img src="/images/Main Logo.png" alt="Nexcent Logo" />
-          <span>Nexcent</span>
-        </div>
+        <Logo />
 
-        {/* Desktop */}
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
-          <li className="nav-item"><a href="#service" className="nav-link">Service</a></li>
-          <li className="nav-item"><a href="#feature" className="nav-link">Feature</a></li>
-          <li className="nav-item"><a href="#product" className="nav-link">Product</a></li>
-          <li className="nav-item"><a href="#testimonial" className="nav-link">Testimonial</a></li>
-          <li className="nav-item"><a href="#faq" className="nav-link">FAQ</a></li>
+        <ul className="nav-menu">
+          {navItems.map((item, index) => (
+            <li key={index} className="nav-item">
+              <a href={item.link} className="nav-link">
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        {/* Login/Signup Buttons - Desktop */}
         <div className="nav-buttons">
-          <button className="login-btn">Login</button>
-          <button className="signup-btn">Sign up</button>
+          <button onClick={toggleTheme} className="theme-toggle">
+            {isDarkMode ? (
+              <i className="fa-solid fa-sun"></i>
+            ) : (
+              <i className="fa-solid fa-moon"></i>
+            )}
+          </button>
+          <Button variant="outline">Login</Button>
+          <Button variant="primary">Sign Up</Button>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="menu-toggle" onClick={toggleMenu}>
-          {isMenuOpen ? (
-           <span className='menu-icon'><i class="fa-solid fa-bars"></i></span> 
-          ) : (
-        <span className='menu-icon'><i class="fa-solid fa-xmark"></i> </span>
-          )}
+          <span className="menu-icon">
+            {isMenuOpen ? (
+              <i className="fa-solid fa-xmark"></i>
+            ) : (
+              <i className="fa-solid fa-bars"></i>
+            )}
+          </span>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="mobile-menu">
           <ul className="mobile-nav-menu">
-            <li className="mobile-nav-item"><a href="#home" className="mobile-nav-link">Home</a></li>
-            <li className="mobile-nav-item"><a href="#service" className="mobile-nav-link">Service</a></li>
-            <li className="mobile-nav-item"><a href="#feature" className="mobile-nav-link">Feature</a></li>
-            <li className="mobile-nav-item"><a href="#product" className="mobile-nav-link">Product</a></li>
-            <li className="mobile-nav-item"><a href="#testimonial" className="mobile-nav-link">Testimonial</a></li>
-            <li className="mobile-nav-item"><a href="#faq" className="mobile-nav-link">FAQ</a></li>
+            {navItems.map((item, index) => (
+              <li key={index} className="mobile-nav-item">
+                <a href={item.link} className="mobile-nav-link">
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
+
           <div className="mobile-nav-buttons">
-            <button className="mobile-login-btn">Login</button>
-            <button className="mobile-signup-btn">Sign up</button>
+            <button onClick={toggleTheme} className="theme-toggle mobile-theme-toggle">
+              {isDarkMode ? (
+                <i className="fa-solid fa-sun"></i>
+              ) : (
+                <i className="fa-solid fa-moon"></i>
+              )}
+            </button>
+            <Button variant="outline">Login</Button>
+            <Button variant="primary">Sign Up</Button>
           </div>
         </div>
       )}

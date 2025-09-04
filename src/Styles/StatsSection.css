@@ -1,0 +1,251 @@
+        .section-wrapper {
+            margin: 2rem auto;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            width: 100%;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        /* Stats Section */
+        .Stat-Section {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-gray);
+            flex-wrap: wrap; 
+            gap: 2rem;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease;
+        }
+
+        .stats-left {
+            flex: 1;
+            min-width: 260px;
+            padding-left: 40px;
+        }
+
+        .stats-left span {
+            color: var(--primary-color);
+        }
+
+        .stats-right {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--icon-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .stat-content h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--text-color);
+        }
+
+        .stat-content p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        /* Testimonial Section */
+        .testimonial {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 60px 40px;
+            background-color: var(--bg-gray);
+            flex-wrap: wrap;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease;
+        }
+
+        .testimonial-left img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-right {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .testimonial-name {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .customer-logos {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .customer-logo {
+            filter: brightness(0.8);
+            transition: filter 0.3s ease;
+        }
+
+        .dark-theme .customer-logo {
+            filter: brightness(1.2);
+        }
+
+        .meet-customers {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .meet-customers:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        /* Client Logos Section */
+        .clients-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: var(--bg-gray);
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease;
+        }
+
+        .clients-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .clients-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .client-logo {
+            filter: brightness(0.9);
+            transition: filter 0.3s ease;
+        }
+
+        .dark-theme .client-logo {
+            filter: brightness(1.1);
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 1024px) {
+            .Stat-Section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats-left {
+                margin-bottom: 2rem;
+                padding-left: 0;
+            }
+
+            .testimonial {
+                flex-direction: column;
+                text-align: center;
+            }
+            .testimonial-left img {
+                width: 280px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .stats-right {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .testimonial-left img {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .customer-logos, .client-logos {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stats-right {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .testimonial {
+                padding: 40px 20px;
+            }
+            
+            body {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-left img {
+                max-width: 250px;
+            }
+            
+            .Stat-Section, .testimonial, .clients-section {
+                padding: 1.5rem;
+            }
+            
+            .client-logos {
+                gap: 20px;
+            }}
