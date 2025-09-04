@@ -3,7 +3,7 @@ import '../Styles/Global.css'
 const NavLogo = ({ textColor = "var(--dark-text, #4D4D4D)" }) => {
   return (
    <div className="nav-logo">
-      <img src="/src/assets/images/Main Logo.png" alt="Nexcent Logo" />
+      <img src="/images/Main Logo.png" alt="Nexcent Logo" />
       <span style={{ color: textColor }}>Nexcent</span>
     </div>
   )
