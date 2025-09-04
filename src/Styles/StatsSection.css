@@ -4,22 +4,17 @@
             border-radius: var(--border-radius);
             width: 100%;
             box-shadow: var(--shadow);
-            transition: background-color 0.3s ease;
         }
 
         /* Stats Section */
         .Stat-Section {
             max-width: 1300px;
-            margin: 0 auto;
             padding: 2rem 3rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: var(--bg-gray);
-            flex-wrap: wrap; 
-            gap: 2rem;
             border-radius: var(--border-radius);
-            transition: background-color 0.3s ease;
         }
 
         .stats-left {
@@ -83,7 +78,6 @@
             gap: 40px;
             padding: 60px 40px;
             background-color: var(--bg-gray);
-            flex-wrap: wrap;
             border-radius: var(--border-radius);
             transition: background-color 0.3s ease;
         }
